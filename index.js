@@ -8,7 +8,7 @@ const ticker = setInterval(() => {
   if (intervals[time]) {
     intervals[time]();
   }
-}, 30000);
+}, 40000);
 
 const jadwalin = (callback) => {
   this.callback = callback;
