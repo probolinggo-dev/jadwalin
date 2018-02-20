@@ -1,6 +1,6 @@
 {
   "name": "jadwalin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Library for scheduling task",
   "main": "index.js",
   "repository": "git@github.com:probolinggo-dev/jadwalin.git",
