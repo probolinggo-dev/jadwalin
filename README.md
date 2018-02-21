@@ -11,5 +11,5 @@ $ yarn install jadwalin
 ```javascript
 const jadwalin = require('jadwalin');
 const task = () => console.log('selamat pagi hayati');
-jadwalin(task).setiap('07:30');
+jadwalin(task).setiap('7:30');
 ```
