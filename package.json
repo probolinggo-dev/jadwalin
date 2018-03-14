@@ -7,6 +7,9 @@
   "author": "ade yahya <adeyahyaprasetyo@gmail.com>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "test": "mocha ./__tests__"
+  },
   "devDependencies": {
     "mocha": "^5.0.4",
     "should": "^13.2.1"
