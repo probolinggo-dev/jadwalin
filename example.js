@@ -1,15 +1,4 @@
-# jadwalin
-Scheduling task with JavaScript
-
-## Installation
-```bash
-$ yarn install jadwalin
-```
-
-## Usage
-
-```javascript
-const jadwalin = require('jadwalin');
+const jadwalin = require('./');
 
 const task1 = () => {
   const now = new Date();
@@ -26,4 +15,3 @@ const scheduler2 = new jadwalin(task2);
 
 scheduler1.setiap(2000);
 scheduler2.pada('3:28');
-```
