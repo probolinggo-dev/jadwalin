@@ -25,5 +25,5 @@ const scheduler1 = new jadwalin(task1);
 const scheduler2 = new jadwalin(task2);
 
 scheduler1.setiap(2000);
-scheduler2.pada('3:28');
+scheduler2.setiapJam('3:28');
 ```

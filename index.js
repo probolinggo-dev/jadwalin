@@ -5,12 +5,12 @@ function jadwalin(callback = null) {
   this.hour = null;
   this.minute = null;
   this.isInterval = false;
-  
+
   this.initTicker = (msInterval = 60000) => {
     if (this.ticker !== null) {
       clearInterval(this.ticker);
     }
-    
+
     const initDate = new Date();
     // Make sure we start the clock precisely ON the 0th millisecond
     setTimeout(() => {
@@ -23,7 +23,7 @@ function jadwalin(callback = null) {
       const date = new Date();
       const hour = date.getHours();
       const minute = date.getMinutes();
-  
+
       if (this.hour === hour && this.minute === minute) {
         this.callback();
       }
@@ -36,7 +36,7 @@ function jadwalin(callback = null) {
 
   return {
     destroy: () => clearInterval(this.ticker),
-    pada: (time) => {
+    setiapJam: (time) => {
       if (this.isInterval)
         throw new Error('pada() function cannot be used in conjunction with setiap() function');
 
@@ -46,10 +46,10 @@ function jadwalin(callback = null) {
       const splittedTime = time.split(':');
       const hour = parseInt(splittedTime[0]);
       const minute = parseInt(splittedTime[1]);
-        
+
       if (isNaN(hour) || isNaN(minute))
         throw new Error('time should be string with format hh:mm');
-        
+
       this.hour = hour;
       this.minute = minute;
       this.initTicker();
@@ -65,6 +65,6 @@ function jadwalin(callback = null) {
       this.initTicker(ms);
     }
   };
-};
+}
 
 module.exports = jadwalin;
